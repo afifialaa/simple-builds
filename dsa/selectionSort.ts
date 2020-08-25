@@ -1,8 +1,8 @@
 function selectionSort(list){
-    for(let i=0; i<list.length - 1; i++){
+    for(let i=0; i<list.length-1; i++){
         let min = i;
-        for(let u=0; u<list.length; u++){
-            if(list[u] > list[min]){
+        for(let u=i+1; u<list.length; u++){
+            if(list[u] < list[min]){
                 min = u;
             }
         }
@@ -11,6 +11,7 @@ function selectionSort(list){
         list[i] = list[min];
         list[min] = temp;
     }
+
     return list;
 }
 

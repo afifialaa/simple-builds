@@ -1,27 +1,23 @@
 let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let ans = binarySearch(list, 3);
+let ans = binarySearch(list, 11);
 console.log(ans);
 
 function binarySearch(list, key) {
 
     let low = 0;
     let high = list.length - 1;
-    let mid = (low + high) / 2;
 
-    let index = -1;
-
-
-    let searching: boolean = true;
-    while ( high >= low) {
+    while ( low <= high) {
+        let mid:number = Math.floor((high + low) / 2);
         if (list[mid] == key) {
-            searching = false;
+            return mid;
         }
         if (list[mid] > key) {
-            low = mid + 1;
+            high = mid - 1;
         } else {
-            high = mid;
+            low = mid + 1;
         }
     }
 
-    return index;
+    return -1;
 }

@@ -1,4 +1,4 @@
-package sorting;
+package search;
 
 import java.rmi.dgc.VMID;
 

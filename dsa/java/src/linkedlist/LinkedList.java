@@ -3,12 +3,7 @@ package linkedlist;
 import java.util.ArrayList;
 
 public class LinkedList {
-    ArrayList<Integer> list;
     private Node head;
-
-    public LinkedList(){
-        this.list = new ArrayList<Integer>();
-    }
 
     public LinkedList(Node head){
         this.head = head;
